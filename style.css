@@ -83,7 +83,7 @@ input.error {
     color: #dc3545;
     font-size: 12px;
     margin-top: 5px;
-    min-height: 15px; /*Чтобы интерфейс не прыгал при появлении текста */
+    min-height: 15px;
 }
 
 .output-container {
