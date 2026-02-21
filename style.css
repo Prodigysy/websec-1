@@ -142,7 +142,6 @@ input.error {
     background: #f0f0f0;
 }
 
-/* --- ТЕМНАЯ ТЕМА --- */
 body.dark-theme {
     background-color: #121212;
     color: #e0e0e0;
@@ -191,7 +190,7 @@ body.dark-theme .history-log {
     color: #888;
 }
 
-/* Ошибки в темной теме */
+
 body.dark-theme input.error {
     border-color: #ff6b6b;
     background-color: #3b1c1c;
