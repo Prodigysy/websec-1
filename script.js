@@ -67,3 +67,24 @@ btnCalc.addEventListener('click', () => {
 
     currentResult.textContent = operationString;
 });
+
+
+
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    themeToggleBtn.textContent = '☀️ Светлая тема';
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    
+    if (document.body.classList.contains('dark-theme')) {
+        themeToggleBtn.textContent = '☀️ Светлая тема';
+        localStorage.setItem('theme', 'dark'); 
+    } else {
+        themeToggleBtn.textContent = '🌙 Темная тема';
+        localStorage.setItem('theme', 'light'); 
+    }
+});
