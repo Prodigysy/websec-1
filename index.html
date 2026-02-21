@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator-wrapper">
+    <h2>Калькулятор</h2>
+    
+    <div class="calc-controls">
+        <div class="input-group">
+            <input type="text" id="num1" placeholder="Введите число">
+            <div class="error-text" id="error1"></div>
+        </div>
+
+        <div class="input-group operation-group">
+            <select id="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="num2" placeholder="Введите число">
+            <div class="error-text" id="error2"></div>
+        </div>
+
+        <div class="input-group button-group">
+            <button id="calc-btn">Посчитать</button>
+        </div>
+    </div>
+
+    <div class="output-container">
+        <div id="history" class="history-log"></div>
+        <div id="result" class="current-result">Результат будет здесь</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

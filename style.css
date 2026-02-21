@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.calculator-wrapper {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+}
+
+.calc-controls {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.operation-group {
+    flex: 1;
+}
+
+.button-group {
+    flex: 1;
+}
+
+input, select, button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input.error {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+.error-text {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    min-height: 15px; /*Чтобы интерфейс не прыгал при появлении текста */
+}
+
+.output-container {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.history-log {
+    color: #adb5bd; 
+    font-size: 14px;
+    margin-bottom: 10px;
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.current-result {
+    color: #212529;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+    .calc-controls {
+        flex-direction: column;
+    }
+    .input-group, .operation-group, .button-group {
+        width: 100%;
+        flex: none;
+    }
+}
