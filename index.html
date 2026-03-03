@@ -8,19 +8,15 @@
 </head>
 <body>
 
-<button id="theme-toggle" class="theme-toggle-btn">🌙 Темная тема</button>
-
-<div class="calculator-wrapper">
-    <h2>Калькулятор</h2>
-    
-    <div class="calc-controls">
-        <div class="input-group">
-            <input type="text" id="num1" placeholder="Введите число">
-            <div class="error-text" id="error1"></div>
+<div class="calculator">
+    <div class="row">
+        <div class="input-wrapper">
+            <input type="text" id="num1" autocomplete="off">
+            <span class="error-msg" id="err1"></span>
         </div>
-
-        <div class="input-group operation-group">
-            <select id="operation">
+        
+        <div class="select-wrapper">
+            <select id="op">
                 <option value="+">+</option>
                 <option value="-">-</option>
                 <option value="*">*</option>
@@ -28,20 +24,15 @@
             </select>
         </div>
 
-        <div class="input-group">
-            <input type="text" id="num2" placeholder="Введите число">
-            <div class="error-text" id="error2"></div>
-        </div>
-
-        <div class="input-group button-group">
-            <button id="calc-btn">Посчитать</button>
+        <div class="input-wrapper">
+            <input type="text" id="num2" autocomplete="off">
+            <span class="error-msg" id="err2"></span>
         </div>
     </div>
 
-    <div class="output-container">
-        <div id="history" class="history-log"></div>
-        <div id="result" class="current-result">Результат будет здесь</div>
-    </div>
+    <button id="calcBtn">подсчитать</button>
+
+    <div class="results" id="results"></div>
 </div>
 
 <script src="script.js"></script>
